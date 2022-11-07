@@ -54,7 +54,7 @@ module SteamLeaderBoard
   def person_name
     buffer = "\0" * 256
     GetPersonName.call(buffer)
-    buffer.unpack1('Z*')
+    buffer.unpack('Z*').first
   end
 end
 
