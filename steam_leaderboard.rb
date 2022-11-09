@@ -29,7 +29,7 @@ module SteamLeaderBoard
   end
 
   def upload_score(score, detail)
-    if detail.size > 127
+    if detail.bytesize > 127
       puts 'detail too long!'
       return
     end
